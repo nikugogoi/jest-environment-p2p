@@ -3,8 +3,8 @@
 ## Usage
 
 ```
-> npm install jest-environment-aegir
-> jest --env aegir
+> yarn add jest-environment-p2p
+> jest --env p2p
 ```
 
 ## License

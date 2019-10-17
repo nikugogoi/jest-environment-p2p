@@ -1,16 +1,17 @@
-'use strict'
+import NodeEnvironment from 'jest-environment-node'
 
-const NodeEnvironment = require('jest-environment-node')
-
-class AegirEnvironment extends NodeEnvironment {
-  constructor (config) {
-    super(Object.assign({}, config, {
-      globals: Object.assign({}, config.globals, {
+class P2pEnvironment extends NodeEnvironment {
+  constructor (config, context) {
+    Object.assign(
+      config.globals,
+      {
         Uint8Array: Uint8Array,
         ArrayBuffer: ArrayBuffer
-      })
-    }))
+      }
+    )
+
+    super(config, context)
   }
 }
 
-module.exports = AegirEnvironment
+module.exports = P2pEnvironment
