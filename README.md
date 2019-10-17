@@ -1,4 +1,4 @@
-# jest-environment-aegir
+# jest-environment-p2p
 
 ## Usage
 
